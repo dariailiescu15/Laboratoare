@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>L6_C</title>
+    <script>
+        function schimbaTitlu(elem) {
+            var c = prompt("Introdu culoarea textului:");
+            if (c !== null) {
+                if (CSS.supports("color", c)) {
+                    elem.style.color = c;
+                } else {
+                    alert("Culoare incorecta!");
+                }
+            }
+        }
+
+        function schimbaFundal(elem) {
+            var c = prompt("Introdu culoarea de fundal:");
+            if (c !== null) {
+                if (CSS.supports("color", c)) {
+                    elem.style.backgroundColor = c;
+                } else {
+                    alert("Culoare incorecta!");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1 onclick="schimbaTitlu(this)">Acesta este un titlu</h1>
+
+    <p onclick="schimbaFundal(this)">
+        Prima linie a paragrafului.<br>
+        A doua linie a paragrafului.<br>
+        A treia linie a paragrafului.
+    </p>
+
+</body>
+</html>
